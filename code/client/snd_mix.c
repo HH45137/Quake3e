@@ -300,7 +300,8 @@ void S_TransferStereo16( unsigned long *pbuf, int endtime )
 		else
 #endif
 #if idx64 && (!defined (_MSC_VER) || defined (USE_WIN32_ASM))
-		S_WriteLinearBlastStereo16_SSE_x64( snd_p, snd_out, snd_linear_count );
+//		S_WriteLinearBlastStereo16_SSE_x64( snd_p, snd_out, snd_linear_count );
+        S_WriteLinearBlastStereo16();
 #else
 		S_WriteLinearBlastStereo16();
 #endif
